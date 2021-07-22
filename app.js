@@ -27,7 +27,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(session({
-    secret: process.env.SECRET,
+    secret: "This is not a secret",
     resave: false,
     saveUninitialized: false
   }));
@@ -53,7 +53,7 @@ var UserSchema = new Schema({
     wordsForaDay:{
         type:Map,
         of:String,
-        default: {"cypsela":"A dry single-seeded fruit formed from a double ovary of which only one develops into a seed, as in the daisy family."}
+        default: {"cypsela":"A dry single seeded fruit formed from a double ovary of which only one develops into a seed, as in the daisy family."}
     },
     knowledgeCheck:{
         type:Map,

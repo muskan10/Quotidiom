@@ -1,0 +1,62 @@
+<%- include('header') %>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-xl-7">
+				<div class="block">
+					<div class="divider mb-3"></div>
+					<h1 class="mb-3 mt-3">Welcome <%=user.username.split("@")[0] %> </h1>
+					
+					<p class="mb-4 pr-5">Welcome to Quotidiom and learn new words everyday. Mark words which you have already learnt and test your vocabulary.</p>
+				</div>
+			</div>
+            <div class="mt-5 mb-lg-5">
+                <a href="/logout" class="btn btn-main btn-round-full">Logout</a>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="features" style="margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-book-alt"></i>
+						</div>
+						<span>Learn New Words</span>
+						<h4 class="mb-3">Daily new words</h4>
+						<p class="mb-4">You will see 10 words learn them and later practice them.</p>
+						<a href="/newwords" class="btn btn-main btn-round-full">Learn New Words</a>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<span>Knowledge Check</span>
+						<h4 class="mb-3">Test your knowledge here</h4>
+                        <p class="mb-4">You have seen 10 words now write their meanings and later review your knowledge.</p>
+                        <a href="/knowledgeCheck" class="btn btn-main btn-round-full">Knowledge Check</a>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<span>Review</span>
+						<h4 class="mb-3">Review your learnings</h4>
+                        <p class="mb-4">What you have learnt today and mark if you dont wish to see the words in future</p>
+                        <a href="/review" class="btn btn-main btn-round-full">Review</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<%- include('footer') %>

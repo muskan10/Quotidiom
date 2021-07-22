@@ -1,0 +1,36 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "live": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-ensure-login": "^0.1.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "geta-random-word": "^2.0.1",
+    "https": "^1.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.3",
+    "mongoose-encryption": "^2.1.0",
+    "mongoose-findorcreate": "^3.0.0",
+    "nodemon": "^2.0.12",
+    "nvm": "^0.0.4",
+    "oxford-dictionary": "^1.6.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "random-word": "^2.0.0",
+    "random-words": "^1.1.1",
+    "rword": "^3.2.0"
+  }
+}

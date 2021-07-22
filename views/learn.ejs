@@ -1,0 +1,56 @@
+<%- include('header') %>
+<section>
+	<div class="container">
+		<div class="row">
+            <div class="mt-5 mb-lg-5 col-3">
+              <button onClick="window.location.reload();" class="btn btn-main btn-round-full">Load More Words</a>
+            </div>
+            <div class="mt-5 mb-lg-5 col-3">
+                <a href="/dashboard" class="btn btn-main btn-round-full">Dashboard</a>
+            </div>
+            <div class="mt-5 mb-lg-5 col-3">
+                <a href="/logout" class="btn btn-main btn-round-full">Logout</a>
+            </div>
+            <div class="mt-5 mb-lg-5 col-3">
+                <a href="/knowledgeCheck" class="btn btn-main btn-round-full">Knowledge Check</a>
+            </div>
+		</div>
+	</div>
+</section>
+
+<section class="features" style="margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+          <p>You have to click on LOAD MORE WORDS if words with their meanings are not displayed. Learn these words as this page loaded as each time you visit this page new words will be ready to increase your vocabulary.<br> Now as you've learnt their meanings go ahead and check your knowldge.</p>
+                        <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col text-center">Word</th>
+                            <th scope="col text-center">Meaning</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% let i=10;
+                                user.wordsForaDay.forEach(function(value,key){ %>
+                                <tr>
+                                    <td><b><%= key %></b></td>
+                                        <td><%= value %></td>
+                                </tr>
+                                <% }) %> 
+                         
+                          
+                        </tbody>
+                      </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<%- include('footer') %>

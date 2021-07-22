@@ -1,0 +1,60 @@
+<%- include("header") %>
+
+<section>
+	<div class="container">
+		<div class="row">
+            <div class="mt-5 mb-lg-5 col-4">
+                <a href="/dashboard" class="btn btn-main btn-round-full">Dashboard</a>
+            </div>
+            <div class="mt-5 mb-lg-5 col-4">
+                <a href="/logout" class="btn btn-main btn-round-full">Logout</a>
+            </div>
+            <div class="mt-5 mb-lg-5 col-4">
+                <a href="/newwords" class="btn btn-main btn-round-full">Learn</a>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<h3 class="text-center">Write the meanings as per your understanding and then click on done.</h3>
+<section class="features" style="margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+                        <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col text-center">Word</th>
+                            <th scope="col text-center">Meaning</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% let i=10
+                                user.wordsForaDay.forEach(function(value,key){ %>
+                            <form action="/kC1Submit" method="POST">
+                                <tr>
+                                    <td><input type="hidden" value=<%= key %> name="word"><b><%= key %></b></td>
+                                    <td><input type="text" onChange="this.form.submit()" name="meaning1"></td>
+                                </tr>
+                            </form>
+                                <% }) %> 
+                        </tbody>
+                      </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+            <div class="mt-5 mb-lg-5 col-4">
+                <a href="/dashboard" class="btn btn-main btn-round-full">Done</a>
+            </div>
+		</div>
+	</div>
+</section>
+<%- include("footer") %>

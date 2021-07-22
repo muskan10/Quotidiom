@@ -1,0 +1,43 @@
+<%- include("header") %>
+
+
+<section class="features" style="margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+                        <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col text-center">Word</th>
+                            <th scope="col text-center">Meaning</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% let i=10
+                                user.wordsForaDay.forEach(function(value,key){ %>
+                            <form action="/kC2Submit" method="POST">
+                                <tr>
+                                    <td><input type="hidden" value=<%= key %> name="word"><b><%= key %></b></td>
+                                    <td><input type="text" onChange="this.form.submit()" name="meaning2"></td>
+                                </tr>
+                            </form>
+                                <% }) %> 
+                        </tbody>
+                      </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+            <div class="mt-5 mb-lg-5 col-4">
+                <a href="/dashboard" class="btn btn-main btn-round-full">Done</a>
+            </div>
+		</div>
+	</div>
+</section>
+
+<%- include("footer") %>

@@ -1,0 +1,63 @@
+<%- include('header')%>
+
+
+
+<!-- Slider Start -->
+<section class="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-xl-7">
+				<div class="block">
+					<div class="divider mb-3"></div>
+					<span class="text-uppercase text-sm letter-spacing ">Word you have looked for</span>
+					<h3 class="mb-3 mt-3"><%= wordtosearch %></h3>
+					
+					<p class="mb-4 pr-5"><b>Meaning </b><%= definition %></p>
+					<div class="btn-container ">
+						<a href="/login" class="btn btn-main-2 btn-icon btn-round-full">Login<i class="icofont-simple-right ml-2  "></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="features">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-book-alt"></i>
+						</div>
+						<span>Word of the day</span>
+            <h3 class="mb-3">Do you know the meaning of?</h3>
+						<h4 class="mb-3"><%= word %></h4>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<span>Search Here!</span>
+						<h4 class="mb-3">Search for a word here!</h4>
+						<form class="form-inline my-2 my-lg-0" action="/searchword" method="POST">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search for a word" aria-label="Search" name="wordtosearch">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-support"></i>
+						</div>
+						<h4 class="mb-3">Sign Up</h4>
+						<%- include('register') %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<%- include('footer')%>

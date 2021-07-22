@@ -8,6 +8,8 @@ const passportLocalMongoose = require("passport-local-mongoose");
 var Schema = mongoose.Schema;
 var Dictionary = require("oxford-dictionary");
 const randomWord = require('random-word')
+var moment = require('moment')
+var format = 'HH:mm:ss';
 const https = require("https");
 
 var config = {
@@ -32,7 +34,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGOLINK, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-muskan:admin-muskan@cluster0.f6jpr.mongodb.net/myFirstDatabase", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 var UserSchema = new Schema({  

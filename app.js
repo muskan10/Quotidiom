@@ -58,7 +58,7 @@ var UserSchema = new Schema({
     knowledgeCheck:{
         type:Map,
         of:Object,
-        default:{ "Hello": ["Greeting","Seek attention ","Return of Hi"]}
+        default:{ "Hello": ["Greeting","Seek attention ","Introduction"]}
     }
 },
 { timestamps : true }

@@ -34,7 +34,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(`mongodb+srv://admin-muskan:${process.env.MONGOP}@cluster0.f6jpr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-muskan:admin-muskan@cluster0.f6jpr.mongodb.net/myFirstDatabase", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 var UserSchema = new Schema({  

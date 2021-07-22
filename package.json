@@ -27,7 +27,6 @@
     "mongoose-findorcreate": "^3.0.0",
     "nodemon": "^2.0.12",
     "nvm": "^0.0.4",
-    "oxford-dictionary": "^1.6.0",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",

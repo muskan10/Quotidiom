@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  quotidiom:
+    build: .                  # Build the Docker image from the current directory
+    container_name: quotidiom-app
+    working_dir: /usr/app/quotidiom
+    volumes:
+      - .:/usr/app/quotidiom       # Mount the current directory to /usr/src/app inside the container
+    ports:
+      - "3002:3002"           # Expose port 3000 to the host
+    depends_on:
+      - mongodb               # Ensure MongoDB is running before the app starts
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/quotidiom  # MongoDB connection string
+
+  # MongoDB service
+  mongodb:
+    image: mongo:latest      # Use the latest official MongoDB image
+    container_name: mongodb
+    ports:
+      - "27017:27017"        # Expose the default MongoDB port
+    volumes:
+      - mongodb_data:/data/db  # Persist MongoDB data between container restarts
+
+# Define a volume to persist MongoDB data
+volumes:
+  mongodb_data:
+    driver: local
